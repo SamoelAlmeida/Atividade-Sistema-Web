@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Sistema Integrado de Agendamento e Gestão de Consultas Médicas">
+        <title>Controle de Consultas</title>
+    </head>
+    <body>
+        <header>
+            <div class="cabeca">
+                <h1>Controle de Consultas</h1>
+            </div>
+        </header>
+
+        <main class="main-codigo">
+            <section class="formulario-consulta">
+                <h2>Formulário de Agendamento</h2>
+                <form id="cadastrar-form-consulta" novalidate>
+                    <input type="hidden" id="consulta-id" name="id">
+                    
+                    <fieldset>
+                        <legend>Informações do Paciente</legend>
+
+                        <div class="sc-form-Nome">
+                            <label for="paciente">Nome completo do paciente : </label>
+                            <input 
+                                type="text"
+                                id="paciente"
+                                name="paciente"
+                                required
+                                placeholder="Digite o nome completo"
+                                autocomplete="name"
+                            >
+                        </div>
+
+                        <div class="sc-form-cep">
+                            <div class="sc-form-tm04">
+                                <label for="cep">CEP : </label>
+                                <input 
+                                    type="text"
+                                    id="cep"
+                                    name="cep"
+                                    maxlength="8"
+                                    placeholder="00000000"
+                                    pattern="[0-9]{8}"
+                                >
+                            </div>
+
+                            <div class="sc-form-tm08">
+                                <label for="endereco">Endereço : </label>
+                                <input 
+                                    type="text"
+                                    id="endereco"
+                                    name="endereco"
+                                    placeholder="Preenchido automaticamente pelo CEP"
+                                    readonly
+                                >
+                            </div>                    
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
